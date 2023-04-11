@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from .forms import StudentForms
 
 
 def listview(request):
-    return render(request, "crud.html")
+    context = {"form": StudentForms}
+    return render(request, "crud.html", context)
 
 
 def createview(request):
