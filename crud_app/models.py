@@ -8,7 +8,7 @@ class Student(models.Model):
     last_name = models.CharField(max_length=250, db_index=True)
     email = models.EmailField(max_length=250, unique=True)
     birthdate = models.DateField(help_text="Add Birthdate")
-    phone_number = PhoneNumberField(default="+91")
+    phone_number = models.IntegerField(max_length=10)
     address = models.CharField(max_length=250)
 
     def __str__(self):

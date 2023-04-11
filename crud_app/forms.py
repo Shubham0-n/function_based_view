@@ -6,8 +6,6 @@ from crispy_forms.layout import Submit
 
 
 class StudentForms(forms.ModelForm):
-    phone_number = PhoneNumberField()
-
     class Meta:
         model = Student
         fields = "__all__"
