@@ -5,6 +5,6 @@ app_name = "crud"
 urlpatterns = [
     path("", listview, name="list-view"),
     path("create/", createview, name="create-view"),
-    path("update/", updateview, name="update-view"),
-    path("delete/", deleteview, name="delete-view"),
+    path("update/<int:pk>/", updateview, name="update-view"),
+    path("delete/<int:pk>/", deleteview, name="delete-view"),
 ]
